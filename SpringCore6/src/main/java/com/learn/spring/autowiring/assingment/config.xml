@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="com.learn.spring.autowiring.assingment.Reservation" name="reserve"
+		c:id="12" c:time="14th april 2022, 15:03:43"/>
+		
+	<bean class="com.learn.spring.autowiring.assingment.Customer" name="cust">
+		<!--  autowire="byType" -->
+		<constructor-arg><value>Atul Kumar</value></constructor-arg>
+		<constructor-arg ref="reserve"></constructor-arg>
+		</bean>
+
+
+
+</beans>
